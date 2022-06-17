@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <class>
+    <name>adr.splashfadelibrary.splashfade</name>
+    <shortname>SplashFade</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. ShowFor is the time to display the Image in milliseconds. FadeDelay slows the fade
+process.  The larger the number the slower, start with 100.  Image is the file to display, must be in the
+assets folder.  Place this Initialize call just after the last View you add in code or just after
+the LoadLayout() in Activity_Create and call this Initialize function like:
+
+Initialize(Activity, Me, "splash.jpg", Gravity.FILL, 3000, 100, "", False)
+
+or to slide off screen, pass "Left", "Up", "Down", "Right" for the next to last parameter like:
+
+Initialize(Activity, Me, "splash.jpg", Gravity.FILL, 3000, 100, "Left", False)
+
+NOTE: Set FadeDelay to 0 and SlideOff = "" to prevent the image from fading out and just to close.
+Also, the last parameter can be set to True or False. If set to True, it will at Random, pick to
+Fade, slide off Left or Right, etc. If you add a: Sub Splash_Complete,  in the calling Activity, that sub will
+be called as soon as the splash screen completes.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ImgGravity</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ShowFor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FadeDelay</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>SlideOff</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Random</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Read_Me">_read_me</name>
+      <comment>Add a sub like below in your Activity and it will be called when the splash screen completes.
+
+Sub Splash_Complete
+___Your Code Here
+End Sub</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>1.02</version>
+  <author>Margret</author>
+</root>

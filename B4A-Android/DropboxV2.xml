@@ -1,0 +1,3733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.dbxv2.AuthWrapper</name>
+        <shortname>DbxAuth</shortname>
+        <objectwrapper>com.dropbox.core.android.Auth</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>startOAuth2Authentication</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>appKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>OAuth2Token</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.DbxClientV2Wrapper</name>
+        <shortname>DbxClientV2</shortname>
+        <objectwrapper>com.dropbox.core.v2.DbxClientV2</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>auth</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.auth.DbxUserAuthRequests</returntype>
+        </method>
+        <method>
+            <name>files</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.files.DbxUserFilesRequests</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>sharing</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.sharing.DbxUserSharingRequests</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>requestConfig</name>
+                <type>com.dropbox.core.DbxRequestConfig</type>
+            </parameter>
+            <parameter>
+                <name>accessToken</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>host</name>
+                <type>com.dropbox.core.DbxHost</type>
+            </parameter>
+        </method>
+        <method>
+            <name>users</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.users.DbxUserUsersRequests</returntype>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.DbxHostWrapper</name>
+        <shortname>DbxHost</shortname>
+        <objectwrapper>com.dropbox.core.DbxHost</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Notify</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Web</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Content</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.DbxRequestConfigWrapper</name>
+        <shortname>DbxRequestConfig</shortname>
+        <objectwrapper>com.dropbox.core.DbxRequestConfig</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>accessToken</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>clientIdentifier</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>userLocale</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>maxRetries</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isAutoRetryEnabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>MaxRetries</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ClientIdentifier</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>HttpRequestor</name>
+            <returntype>com.dropbox.core.http.HttpRequestor</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UserLocale</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.DbxUserAuthRequestsWrapper</name>
+        <shortname>DbxUserAuthRequests</shortname>
+        <objectwrapper>com.dropbox.core.v2.auth.DbxUserAuthRequests</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>tokenRevoke</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.DropboxWrapper</name>
+        <shortname>DropboxV2</shortname>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Visibility_TEAM_AND_PASSWORD</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PendingUploadMode_FILE</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.PendingUploadMode</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailSize_W128H128</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.ThumbnailSize</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccessLevel_VIEWER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PendingUploadMode_FOLDER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.PendingUploadMode</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AclUpdatePolicy_OTHER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AclUpdatePolicy</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailSize_W640H480</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.ThumbnailSize</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_RELINQUISH_MEMBERSHIP</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility_TEAM_ONLY</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility_OTHER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility_SHARED_FOLDER_ONLY</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccessLevel_VIEWER_NO_COMMENT</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_INVITE_VIEWER_NO_COMMENT</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_INVITE_EDITOR</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccessLevel_OTHER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_OTHER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailSize_W1024H768</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.ThumbnailSize</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AclUpdatePolicy_OWNER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AclUpdatePolicy</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccountType_PRO</name>
+            <returntype EnumType="true">com.dropbox.core.v2.users.AccountType</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility_PUBLIC</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailFormat_JPEG</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.ThumbnailFormat</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_UNMOUNT</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailSize_W32H32</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.ThumbnailSize</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_CREATE_LINK</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_CHANGE_OPTIONS</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_EDIT_CONTENTS</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility_PASSWORD</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccountType_BUSINESS</name>
+            <returntype EnumType="true">com.dropbox.core.v2.users.AccountType</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_UNSHARE</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_INVITE_VIEWER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_SHARE_LINK</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccountType_BASIC</name>
+            <returntype EnumType="true">com.dropbox.core.v2.users.AccountType</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccessLevel_OWNER</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailFormat_PNG</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.ThumbnailFormat</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AclUpdatePolicy_EDITORS</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AclUpdatePolicy</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccessLevel_EDITOR</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FolderAction_LEAVE_A_COPY</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.FolderAction</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.PropertyFieldWrapper</name>
+        <shortname>PropertyField</shortname>
+        <objectwrapper>com.dropbox.core.v2.properties.PropertyField</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Value</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.PropertyGroupWrapper</name>
+        <shortname>PropertyGroup</shortname>
+        <objectwrapper>com.dropbox.core.v2.properties.PropertyGroup</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Fields</name>
+            <returntype>java.util.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TemplateId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.DbxUserFilesRequestsWrapper</name>
+        <shortname>DbxUserFilesRequests</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.DbxUserFilesRequests</objectwrapper>
+        <owner>process</owner>
+        <event>CreateFolder(success As boolean, meta As FolderMetadata, error As String)</event>
+        <event>Copy(success As boolean, meta As Metadata, error As String)</event>
+        <event>CopyBatch(success As boolean, meta As Map, error As String)</event>
+        <event>CopyBatchCheck(success As boolean, meta As Map, error As String)</event>
+        <event>CopyReference(metainfo As Map)</event>
+        <event>DownloadFinished(success As boolean, meta As FileMetadata, error As String)</event>
+        <event>LatestCursor(success As boolean, path As String, cursor As String, error As String)</event>
+        <event>ListFolder(success As boolean, content As List, error As String)</event>
+        <event>ListFolderLatestCursor(success As boolean, content As List, error As String)</event>
+        <event>ListRevisions(success As boolean, meta As Map, error As String)</event>
+        <event>LongPoll(success As boolean, changes As boolean, BackOff As long, error As String)</event>
+        <event>Move(success As boolean, meta As Metadata, error As String)</event>
+        <event>MoveBatch(success As boolean, meta As Map, error As String)</event>
+        <event>MoveBatchCheck(success As boolean, meta As Map, error As String)</event>
+        <event>Preview(success As boolean, meta As FileMetadata, error As String)</event>
+        <event>Restore(success As boolean, meta As FileMetadata, error As String)</event>
+        <event>SaveURL(success As boolean, meta As Map, info As String)</event>
+        <event>SaveURLJobStatus(success As boolean, meta As Map, info As String)</event>
+        <event>TemporaryLink(success As boolean, path As String, link As String, meta As FileMetadata)</event>
+        <event>UploadFinished(success As boolean, meta As FileMetadata, error As String)</event>
+        <event>UploadSessionFinished(session As Map)</event>
+        <event>UploadSessionProgress(session As Map)</event>
+        <event>PermanentlyDelete(sucess As boolean, path As String,error As String</event>
+        <method>
+            <name>listRevisions</name>
+            <comment>Return revisions of a file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dummy2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getPreview</name>
+            <comment>Get a preview for a file. Currently previews are only generated for 
+ the files with the following extensions: .doc, .docx, .docm, .ppt, 
+ .pps, .ppsx, .ppsm, .pptx, .pptm, .xls, .xlsx, .xlsm, .rtf.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getcopyReference</name>
+            <comment>Get a copy reference to a file or folder. This reference 
+ string can be used to save that file or folder to 
+ another user's Dropbox by passing it to copy_reference/save.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createFolder2</name>
+            <comment>Create a folder at a given path. 
+ If autorename is set to true then the new folder will become 
+ renamed automatically.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>autorename</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>upload</name>
+            <comment>Create a new file with the contents provided in the request.
+ Do not use this to upload a file larger than 150 MB. 
+ Instead, create an upload session with upload_session/start.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>destination</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>AutoRename</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>mute</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setDebugLog</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getThumbnail</name>
+            <comment>Get a thumbnail for an image.
+ This method currently supports files with the following 
+ file extensions: jpg, jpeg, png, tiff, tif, gif and bmp. 
+ 
+ Photos that are larger than 20MB in size won't be 
+ converted to a thumbnail.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type EnumType="true">com.dropbox.core.v2.files.ThumbnailFormat</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type EnumType="true">com.dropbox.core.v2.files.ThumbnailSize</type>
+            </parameter>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPreview2</name>
+            <comment>Get a preview for a file. Currently previews are only generated for 
+ the files with the following extensions: .doc, .docx, .docm, .ppt, 
+ .pps, .ppsx, .ppsm, .pptx, .pptm, .xls, .xlsx, .xlsm, .rtf.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>rev</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listRevisions2</name>
+            <comment>Return revisions of a file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>limit</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>delete</name>
+            <comment>Delete the file or folder at a given path. If the path is a 
+ folder, all its contents will be deleted too.
+ A successful response indicates that the file or folder was 
+ deleted. The returned metadata will be the corresponding 
+ FileMetadata or FolderMetadata for the item at time of 
+ deletion, and not a DeletedMetadata object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>deleteBatch</name>
+            <comment>Delete multiple files/folders at once.
+ This route is asynchronous, which returns a 
+ job ID immediately and runs the delete batch 
+ asynchronously. Use delete_batch/check to 
+ check the job status.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>entries</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setEventname</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>saveUrl</name>
+            <comment>Save a specified URL into a file in user's Dropbox. 
+ If the given path already exists, the file will be 
+ renamed to avoid the conflict (e.g. myfile (1).txt).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>search</name>
+            <comment>Searches for files and folders.
+ Note: Recent changes may not immediately be 
+ reflected in search results due to a short 
+ delay in indexing.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>query</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>maxResults</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>startAt</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>download</name>
+            <comment>Downloads the file "path" and store it in the 
+ path "localPath" under the filename "localFilename".
+ DEV:Tested</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>download2</name>
+            <comment>Downloads the file "path" with the revision "rev" and store it 
+ in the path "localPath" under the filename "localFilename".
+ DEV:NOT Tested</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>rev</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveBatchCheck</name>
+            <comment>Returns the status of an asynchronous job for move_batch.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>asyncJobId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>copyBatch</name>
+            <comment>Copy multiple files or folders to different locations at once in the 
+ user's Dropbox. If RelocationBatchArg.allow_shared_folder is false, 
+ this route is atomic. If on entry failes, the whole transaction will 
+ abort. If RelocationBatchArg.allow_shared_folder is true, not 
+ atomicity is guaranteed, but you will be able to copy the contents 
+ of shared folders to new locations.
+ This route will return job ID immediately and do the async copy job 
+ in background. Please use copy_batch/check to check the job status.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>entries</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolderLatestCursor</name>
+            <comment>A way to quickly get a cursor for the folder's state. Unlike 
+ list_folder, list_folder/get_latest_cursor doesn't return any 
+ entries. This endpoint is for app which only needs to know 
+ about new files and modifications and doesn't need to know 
+ about files that already exist in Dropbox.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>includeDeleted</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>includeHasExplicitSharedMembers</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>includeMediaInfo</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>recursive</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>debuglog</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolderLongpoll</name>
+            <comment>A longpoll endpoint to wait for changes on an account. In conjunction 
+ with list_folder/continue, this call gives you a low-latency way to 
+ monitor an account for file changes. The connection will block until 
+ there are changes available or a timeout occurs.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>cursor</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createFolder</name>
+            <comment>Create a folder at a given path.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>copy</name>
+            <comment>Copy a file or folder to a different location 
+ in the user's Dropbox. If the source path is 
+ a folder all its contents will be copied.
+fromPath: 
+toPath: DEV:not tested!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>toPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>permanentlyDelete</name>
+            <comment>Permanently delete the file or folder at a given 
+ path (see https://www.dropbox.com/en/help/40).
+ Note: This endpoint is only available for Dropbox Business apps.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>move</name>
+            <comment>Move a file or folder to a different 
+ location in the user's Dropbox.
+ If the source path is a folder 
+ all its contents will be moved.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>toPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getMetadata</name>
+            <comment>Returns the metadata for a file or folder.
+ Note: Metadata for the root folder is unsupported.
+path: DEV:not tested!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>includeDeleted</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>includeHasExplicitSharedMembers</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>includeMediaInfo</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>debuglog</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>restore</name>
+            <comment>Restore a file to a specific revision.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>rev</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDownloadbuilder</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.files.DownloadBuilder</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolder</name>
+            <comment>Lists the content from path "path"
+ - If "includeDeleted" is set to true then deleted 
+ files/folders are listed too. See Metadata for 
+ details on each entry.
+ 
+ - is "includeHasExplicitSharedMembers" is set to 
+ true then "i dont know what happens ;) See 
+ Dropbox site for more info ;-)
+ 
+ - if "includeMediaInfo" is set to true then the 
+ result will ontain MediaInfo too (pictures and video)
+ 
+ - If "recursive" is set to true then the Folder will 
+ be listed recursively. Note that this could result in 
+ a long list of Metadatas.
+ 
+ - If "debuglog" is set to true then the lib will do 
+ some LOG-Output so see where it hangs
+ 
+ DEV:Tested!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>includeDeleted</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>includeHasExplicitSharedMembers</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>includeMediaInfo</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>recursive</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>debuglog</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>moveBatch</name>
+            <comment>Move multiple files or folders to different locations 
+ at once in the user's Dropbox.
+ This route is 'all or nothing', which means if one entry 
+ fails, the whole transaction will abort.
+ 
+ This route will return job ID immediately and do 
+ the async moving job in background. Please use 
+ move_batch/check to check the job status.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>relocation</name>
+                <type>java.util.List</type>
+            </parameter>
+            <parameter>
+                <name>allowSharedFolder</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>autorename</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>copyBatchCheck</name>
+            <comment>Returns the status of an asynchronous job for 
+ copy_batch. If success, it returns list of 
+ results for each entry.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>batchID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolderLongpoll2</name>
+            <comment>A longpoll endpoint to wait for changes on an account. In conjunction 
+ with list_folder/continue, this call gives you a low-latency way to 
+ monitor an account for file changes. The connection will block until 
+ there are changes available or a timeout occurs.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>cursor</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTemporaryLink</name>
+            <comment>Get a temporary link to stream content of a file. 
+ This link will expire in four hours and afterwards 
+ you will get 410 Gone. 
+ Content-Type of the link is determined 
+ automatically by the file's mime type.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>saveUrlCheckJobStatus</name>
+            <comment>Check the status of a save_url job.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>asyncJobId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>deleteBatchCheck</name>
+            <comment>Returns the status of an asynchronous job for 
+ delete_batch. If success, it returns list 
+ of result for each entry.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>batchID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.DimensionsWrapper</name>
+        <shortname>Dimensions</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.Dimensions</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Height</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.DownloadBuilderWrapper</name>
+        <shortname>DownloadBuilder</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.DownloadBuilder</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>download</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>out</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>range2</name>
+            <comment></comment>
+            <returntype>de.donmanfred.dbxv2.files.DownloadBuilderWrapper</returntype>
+            <parameter>
+                <name>start</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>length</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>range</name>
+            <comment></comment>
+            <returntype>de.donmanfred.dbxv2.files.DownloadBuilderWrapper</returntype>
+            <parameter>
+                <name>start</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>builder</name>
+                <type>com.dropbox.core.v2.files.DownloadBuilder</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.FileMetadataWrapper</name>
+        <shortname>FileMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.FileMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Rev</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PropertyGroups</name>
+            <returntype>java.util.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Size</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>HasExplicitSharedMembers</name>
+            <returntype>java.lang.Boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SharingInfo</name>
+            <returntype>com.dropbox.core.v2.files.FileSharingInfo</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ClientModified</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ServerModified</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MediaInfo</name>
+            <returntype>com.dropbox.core.v2.files.MediaInfo</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathDisplay</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathLower</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.FolderMetadataWrapper</name>
+        <shortname>FolderMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.FolderMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PropertyGroups</name>
+            <returntype>java.util.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathDisplay</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SharingInfo</name>
+            <returntype>com.dropbox.core.v2.files.FolderSharingInfo</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathLower</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.FolderSharingInfoWrapper</name>
+        <shortname>FolderSharingInfo</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.FolderSharingInfo</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ReadOnly</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NoAccess</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TraverseOnly</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.GpsCoordinatesWrapper</name>
+        <shortname>GpsCoordinates</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.GpsCoordinates</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Latitude</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.ListFolderResultWrapper</name>
+        <shortname>ListFolderResult</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.ListFolderResult</objectwrapper>
+        <owner>process</owner>
+        <event>FolderEntries(result As List)</event>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>result</name>
+                <type>com.dropbox.core.v2.files.ListFolderResult</type>
+            </parameter>
+        </method>
+        <property>
+            <name>HasMore</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Entries</name>
+            <returntype>void</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Cursor</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.MediaInfoWrapper</name>
+        <shortname>MediaInfo</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.MediaInfo</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isPending</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isMetadata</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>MetadataValue</name>
+            <returntype>com.dropbox.core.v2.files.MediaMetadata</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>tag</name>
+            <returntype EnumType="true">com.dropbox.core.v2.files.MediaInfo.Tag</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.MediaMetadataWrapper</name>
+        <shortname>MediaMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.MediaMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>MetadataValue</name>
+            <returntype>com.dropbox.core.v2.files.Dimensions</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeTaken</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Location</name>
+            <returntype>com.dropbox.core.v2.files.GpsCoordinates</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.MetadataWrapper</name>
+        <shortname>Metadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.Metadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathDisplay</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathLower</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.RelocationBatchErrorWrapper</name>
+        <shortname>RelocationBatchError</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.RelocationBatchError</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>isCantNestSharedFolder</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isCantCopySharedFolder</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isDuplicatedOrNestedPaths</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>error</name>
+                <type>com.dropbox.core.v2.files.RelocationBatchError</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>isFromWrite</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isTo</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isTooManyFiles</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isCantMoveFolderIntoItself</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>isTooManyWriteOperations</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isOther</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isFromLookup</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Used</name>
+            <returntype>com.dropbox.core.v2.files.WriteError</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FromPath</name>
+            <returntype>com.dropbox.core.v2.files.LookupError</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ToValue</name>
+            <returntype>com.dropbox.core.v2.files.WriteError</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.RelocationPathWrapper</name>
+        <shortname>RelocationPath</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.RelocationPath</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>fromPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>toPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Used</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FromPath</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.files.SaveUrlErrorWrapper</name>
+        <shortname>SaveUrlError</shortname>
+        <objectwrapper>com.dropbox.core.v2.files.SaveUrlError</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>isPath</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>isDownloadFailed</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isNotFound</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isInvalidUrl</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>isOther</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Fields</name>
+            <returntype>com.dropbox.core.v2.files.WriteError</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.DbxUserSharingRequestsWrapper</name>
+        <shortname>DbxUserSharingRequests</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.DbxUserSharingRequests</objectwrapper>
+        <owner>process</owner>
+        <event>SharedFolderMetadata(success As boolean, meta As SharedFolderMetadata, error As String)</event>
+        <event>SharedFolder(success As boolean, info As Map, info As String)</event>
+        <event>AddFileMember(success As boolean, members As List, error As String)</event>
+        <event>listSharedLinks(success As boolean, sharedLinks As List, error As String)</event>
+        <event>listReceivedFiles(success As boolean, receivedFiles As List, error As String)</event>
+        <event>listFolders(success As boolean, folders As List, error As String)</event>
+        <event>listMountableFolders(success As boolean, folders As List, error As String)</event>
+        <event>UnshareFolder(success As boolean, info As Map, info As String)</event>
+        <event>removeFileMember(success As boolean, info As Map, info As String)</event>
+        <event>UpdateFolderMember(success As boolean, info As Map, info As String)</event>
+        <event>UnshareFile(success As boolean, error As String)</event>
+        <event>umountFolder(success As boolean, sharedFolderId As String, error As String)</event>
+        <event>revokeSharedLink(success As boolean, url As String, error As String)</event>
+        <event>transferFolder(success As boolean, sharedFolderId As String, toDropboxId As String, error As String)</event>
+        <event>relinquishFolderMembership(success As boolean, info As Map, info As String)</event>
+        <event>relinquishFileMembership(success As boolean, fle As String, info As String)</event>
+        <event>mountFolder(success As boolean, meta As SharedFolderMetadata, error As String)</event>
+        <event>modifySharedLinkSettings(success As boolean, meta As SharedLinkMetadata, error As String)</event>
+        <event>listFolderMembers(success As boolean, info As Map, info As String)</event>
+        <event>listFileMembers(success As boolean, info As Map, info As String)</event>
+        <event>listFileMembersBatch(success As boolean, members As List, info As String)</event>
+        <event>SharedLinks(success As boolean, path As String, links As List, error As String)</event>
+        <event>SharedLinkMetadata(success As boolean, url As String, meta As SharedLinkMetadata)</event>
+        <event>DownloadFinished(success As boolean, meta As SharedFileMetadata, error As String)</event>
+        <event>FolderMetadata(sharedFolderId As String, meta As SharedFolderMetadata)</event>
+        <event>FileMetadata(success As boolean, sharedFile As String, meta As SharedFileMetadata, error As String)</event>
+        <event>listFileMetadataBatch(success As boolean, files As List, info As String)</event>
+        <event>createSharedLink(success As boolean, path As String, meta As PathLinkMetadata, error As String)</event>
+        <event>ShareJobStatus(CheckSuccess As boolean, asyncJobId As String, metainfo As Map, error As String)</event>
+        <event>JobStatus(CheckSuccess As boolean, asyncJobId As String, metainfo As Map, error As String)</event>
+        <event>RemoveMemberJobStatus(CheckSuccess As boolean, asyncJobId As String, metainfo As Map, error As String)</event>
+        <event>ChangeFileMemberAccess(success As boolean, path As String, metainfo As Map, error As String)</event>
+        <event>AddFolderMember(success As boolean, sharedFolderId As String, error As String)</event>
+        <method>
+            <name>relinquishFileMembership</name>
+            <comment>The current user relinquishes their membership in 
+ the designated file. Note that the current user 
+ may still have inherited access to this file 
+ through the parent folder.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fle</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addFolderMember</name>
+            <comment>Allows an owner or editor (if the ACL update policy allows)
+ of a shared folder to add another member. For the new member 
+ to get access to all the functionality for this folder, you 
+ will need to call mount_folder on their behalf.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>members</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getSharedLinkMetadata</name>
+            <comment>Get the shared link's metadata.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dummy</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>createSharedLinkWithSettings</name>
+            <comment>Create a shared link with custom settings. If no settings are given 
+ then the default visibility is RequestedVisibility.public (The 
+ resolved visibility, though, may depend on other aspects such as 
+ team and shared folder settings).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>settings</name>
+                <type>com.dropbox.core.v2.sharing.SharedLinkSettings</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMembers2</name>
+            <comment>Use to obtain the members who have been invited 
+ to a file, both inherited and uninherited members.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fle</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>includeInherited</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>limit</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>checkRemoveMemberJobStatus</name>
+            <comment>Returns the status of an asynchronous job 
+ for sharing a folder.
+ 
+ Apps must have full Dropbox access to use 
+ this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>asyncJobId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMembers3</name>
+            <comment>Use to obtain the members who have been invited 
+ to a file, both inherited and uninherited members.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fle</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>includeInherited</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>limit</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>actions</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>checkJobStatus</name>
+            <comment>Returns the status of an asynchronous job.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>asyncJobId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unmountFolder</name>
+            <comment>The current user unmounts the designated folder. They can 
+ re-mount the folder at a later time using mount_folder.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMembersBatch</name>
+            <comment>Get members of multiple files at once. The arguments to 
+ this route are more limited, and the limit on query 
+ result size per file is more strict. To customize the 
+ results more, use the individual file endpoint.
+ 
+ Inherited users and groups are not included in the 
+ result, and permissions are not returned for this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>files</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolders</name>
+            <comment>Return the list of all shared folders the current 
+ user has access to.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>modifySharedLinkSettings</name>
+            <comment>Modify the shared link's settings. If the requested 
+ visibility conflict with the shared links policy of 
+ the team or the shared folder (in case the linked file 
+ is part of a shared folder) then the 
+ LinkPermissions.resolved_visibility of the returned 
+ SharedLinkMetadata will reflect the actual visibility 
+ of the shared link and the 
+ LinkPermissions.requested_visibility will reflect 
+ the requested visibility.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>settings</name>
+                <type>com.dropbox.core.v2.sharing.SharedLinkSettings</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetFileMetadata2</name>
+            <comment>Returns shared file metadata.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>actions</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mountFolder</name>
+            <comment>The current user mounts the designated folder.
+ Mount a shared folder for a user after they have 
+ been added as a member. Once mounted, the shared 
+ folder will appear in their Dropbox.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addFileMember</name>
+            <comment>Adds specified members to a file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>members</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getFolderMetadata</name>
+            <comment>Returns shared folder metadata by its folder ID.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listSharedLinks</name>
+            <comment>List shared links of this user. If no path is 
+ given, returns a list of all shared links for 
+ the current user.
+ If a non-empty path is given, returns a list 
+ of all shared links that allow access to the 
+ given path - direct links to the given path 
+ and links to parent folders of the given path. 
+ Links to parent folders can be suppressed 
+ by setting direct_only to true.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unshareFolder2</name>
+            <comment>Allows a shared folder owner to unshare the folder.
+ You'll need to call check_job_status to determine 
+ if the action has completed successfully.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>leaveacopy</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMetadataBatch</name>
+            <comment>Returns shared file metadata.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>files</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>changeFileMemberAccess</name>
+            <comment>DEPRECATED BY /update_file_member</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>member</name>
+                <type>com.dropbox.core.v2.sharing.MemberSelector</type>
+            </parameter>
+            <parameter>
+                <name>accessLevel</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSharedLinkFile</name>
+            <comment>Download the shared link's file from a user's Dropbox.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>linkPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unshareFile</name>
+            <comment>Remove all members from this file. 
+ Does not remove inherited members.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>updateFolderPolicy</name>
+            <comment>Update the sharing policies for a shared folder.
+ User must have AccessLevel.owner access to the 
+ shared folder to update its policies.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aclPolicy</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.AclUpdatePolicy</type>
+            </parameter>
+            <parameter>
+                <name>memberPolicy</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.MemberPolicy</type>
+            </parameter>
+            <parameter>
+                <name>sharedLinkPolicy</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.SharedLinkPolicy</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createSharedLink2</name>
+            <comment>DEPRECATED BY /create_shared_link_with_settings
+ Create a shared link. If a shared link already exists for 
+ the given path, that link is returned. Note that in the 
+ returned PathLinkMetadata, the PathLinkMetadata.url field 
+ is the shortened URL if CreateSharedLinkArg.short_url 
+ argument is set to true.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getFileMetadata</name>
+            <comment>Returns shared file metadata.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setDebugLog</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setEventname</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeFolderMember</name>
+            <comment>Allows an owner or editor (if the ACL update policy 
+ allows) of a shared folder to remove another member.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>member</name>
+                <type>com.dropbox.core.v2.sharing.MemberSelector</type>
+            </parameter>
+            <parameter>
+                <name>leaveACopy</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>updateFolderMember</name>
+            <comment>Allows an owner or editor of a shared folder to update 
+ another member's permissions.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>member</name>
+                <type>com.dropbox.core.v2.sharing.MemberSelector</type>
+            </parameter>
+            <parameter>
+                <name>accessLevel</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</type>
+            </parameter>
+        </method>
+        <method>
+            <name>checkShareJobStatus</name>
+            <comment>Returns the status of an asynchronous 
+ job for sharing a folder.
+ Apps must have full Dropbox access 
+ to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>asyncJobId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMembersBatch2</name>
+            <comment>Get members of multiple files at once. The arguments to 
+ this route are more limited, and the limit on query 
+ result size per file is more strict. To customize the 
+ results more, use the individual file endpoint.
+ 
+ Inherited users and groups are not included in the 
+ result, and permissions are not returned for this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>files</name>
+                <type>java.util.List</type>
+            </parameter>
+            <parameter>
+                <name>limit</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addFolderMember2</name>
+            <comment>Allows an owner or editor (if the ACL update policy allows)
+ of a shared folder to add another member. For the new member 
+ to get access to all the functionality for this folder, you 
+ will need to call mount_folder on their behalf.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>members</name>
+                <type>java.util.List</type>
+            </parameter>
+            <parameter>
+                <name>customMessage</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quiet</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getFolderMetadata2</name>
+            <comment>Returns shared folder metadata by its folder ID.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>actions</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeFileMember</name>
+            <comment>DEPRECATED BY /remove_file_member_2
+ Identical to remove_file_member_2 but with less information returned.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>member</name>
+                <type>com.dropbox.core.v2.sharing.MemberSelector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>revokeSharedLink</name>
+            <comment>Revoke a shared link.
+ Note that even after revoking a shared link to a file, the 
+ file may be accessible if there are shared links leading 
+ to any of the file parent folders. To list all shared links 
+ that enable access to a specific file, you can use the 
+ list_shared_links with the file as the 
+ ListSharedLinksArg.path argument.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listMountableFolders</name>
+            <comment>Return the list of all shared folders the 
+ current user can mount or unmount.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getSharedLinkMetadata2</name>
+            <comment>Get the shared link's metadata.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>linkPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unshareFolder</name>
+            <comment>Allows a shared folder owner to unshare the folder.
+ You'll need to call check_job_status to determine 
+ if the action has completed successfully.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createSharedLink</name>
+            <comment>DEPRECATED BY /create_shared_link_with_settings
+ Create a shared link. If a shared link already exists for 
+ the given path, that link is returned. Note that in the 
+ returned PathLinkMetadata, the PathLinkMetadata.url field 
+ is the shortened URL if CreateSharedLinkArg.short_url 
+ argument is set to true.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.PendingUploadMode</type>
+            </parameter>
+            <parameter>
+                <name>shortUrl</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>relinquishFolderMembership2</name>
+            <comment>The current user relinquishes their membership in 
+ the designated file. Note that the current user 
+ may still have inherited access to this file 
+ through the parent folder.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>leaveACopy</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolderMembers</name>
+            <comment>Returns shared folder membership by its folder ID.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeFileMember2</name>
+            <comment>Removes a specified member from the file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>member</name>
+                <type>com.dropbox.core.v2.sharing.MemberSelector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>shareFolder</name>
+            <comment>Share a folder with collaborators. Most sharing will 
+ be completed synchronously. Large folders will be 
+ completed asynchronously. To make testing the async 
+ case repeatable, set `ShareFolderArg.force_async`.
+ If a ShareFolderLaunch.async_job_id is returned, 
+ you'll need to call check_share_job_status until 
+ the action completes to get the metadata for 
+ the folder.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aclUpdatePolicy</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.AclUpdatePolicy</type>
+            </parameter>
+            <parameter>
+                <name>memberPolicy</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.MemberPolicy</type>
+            </parameter>
+            <parameter>
+                <name>sharedLinkPolicy</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.SharedLinkPolicy</type>
+            </parameter>
+            <parameter>
+                <name>forceAsync</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listReceivedFiles</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>actions</name>
+                <type>java.util.List</type>
+            </parameter>
+            <parameter>
+                <name>limit</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>transferFolder</name>
+            <comment>Transfer ownership of a shared folder to a member of the shared 
+ folder. User must have AccessLevel.owneraccess to the shared 
+ folder to perform a transfer.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>toDropboxId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMetadataBatch2</name>
+            <comment>Returns shared file metadata.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>files</name>
+                <type>java.util.List</type>
+            </parameter>
+            <parameter>
+                <name>actions</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>relinquishFolderMembership</name>
+            <comment>The current user relinquishes their membership in the designated 
+ shared folder and will no longer have access to the folder. A 
+ folder owner cannot relinquish membership in their own folder.
+ This will run synchronously if leave_a_copy is false, and 
+ asynchronously if leave_a_copy is true. 
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFileMembers</name>
+            <comment>Use to obtain the members who have been invited 
+ to a file, both inherited and uninherited members.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fle</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>modifySharedLinkSettings2</name>
+            <comment>Modify the shared link's settings. If the requested 
+ visibility conflict with the shared links policy of 
+ the team or the shared folder (in case the linked file 
+ is part of a shared folder) then the 
+ LinkPermissions.resolved_visibility of the returned 
+ SharedLinkMetadata will reflect the actual visibility 
+ of the shared link and the 
+ LinkPermissions.requested_visibility will reflect 
+ the requested visibility.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>settings</name>
+                <type>com.dropbox.core.v2.sharing.SharedLinkSettings</type>
+            </parameter>
+            <parameter>
+                <name>removeExpiration</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>listFolderMembers2</name>
+            <comment>Returns shared folder membership by its folder ID.
+ Apps must have full Dropbox access to use this endpoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>actions</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.LinkMetadataWrapper</name>
+        <shortname>LinkMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.LinkMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>visibility</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.Visibility</type>
+            </parameter>
+            <parameter>
+                <name>exp</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Visibility</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Expires</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Url</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.MemberSelectorWrapper</name>
+        <shortname>MemberSelector</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.MemberSelector</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>isDropboxId</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isEmail</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dropboxID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>email</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isOther</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Email</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DropboxId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.PathLinkMetadataWrapper</name>
+        <shortname>PathLinkMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.PathLinkMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>visibility</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.Visibility</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>exp</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Path</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.Visibility</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Expires</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Url</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.SharedFileMetadataWrapper</name>
+        <shortname>SharedFileMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.SharedFileMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>policy</name>
+                <type>com.dropbox.core.v2.sharing.FolderPolicy</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>previewUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Policy</name>
+            <returntype>com.dropbox.core.v2.sharing.FolderPolicy</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PreviewUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathLower</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeInvited</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>OwnerTeam</name>
+            <returntype>com.dropbox.core.v2.users.Team</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.SharedFolderMetadataWrapper</name>
+        <shortname>SharedFolderMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.SharedFolderMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>accessType</name>
+                <type EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</type>
+            </parameter>
+            <parameter>
+                <name>isTeamFolder</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>policy</name>
+                <type>com.dropbox.core.v2.sharing.FolderPolicy</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>sharedFolderId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeInvited</name>
+                <type>java.util.Date</type>
+            </parameter>
+            <parameter>
+                <name>previewUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Policy</name>
+            <returntype>com.dropbox.core.v2.sharing.FolderPolicy</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsTeamFolder</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>OwnerTeam</name>
+            <returntype>com.dropbox.core.v2.users.Team</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SharedFolderId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PreviewUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Permissions</name>
+            <returntype>java.util.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AccessType</name>
+            <returntype EnumType="true">com.dropbox.core.v2.sharing.AccessLevel</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathLower</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeInvited</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.SharedLinkMetadataWrapper</name>
+        <shortname>SharedLinkMetadata</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.SharedLinkMetadata</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>policy</name>
+                <type>com.dropbox.core.v2.sharing.FolderPolicy</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>perm</name>
+                <type>com.dropbox.core.v2.sharing.LinkPermissions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ParentSharedFolderId</name>
+            <returntype>com.dropbox.core.v2.users.Team</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Expires</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PathLower</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LinkPermissions</name>
+            <returntype>com.dropbox.core.v2.sharing.LinkPermissions</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.sharing.SharedLinkSettingsWrapper</name>
+        <shortname>SharedLinkSettings</shortname>
+        <objectwrapper>com.dropbox.core.v2.sharing.SharedLinkSettings</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>requestedVisibility</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>linkPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>expires</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>LinkPassword</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Expires</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RequestedVisibility</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.users.BasicAccountWrapper</name>
+        <shortname>BasicAccount</shortname>
+        <objectwrapper>com.dropbox.core.v2.users.BasicAccount</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>usage</name>
+                <type>com.dropbox.core.v2.users.BasicAccount</type>
+            </parameter>
+        </method>
+        <property>
+            <name>EmailVerified</name>
+            <returntype>boolean</returntype>
+            <comment>Whether the user has verified their e-mail address.</comment>
+        </property>
+        <property>
+            <name>TeamMemberId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's unique team member id. This field will only be present if the
+ user is part of a team and {@link BasicAccount#getIsTeammate} is {@code
+ true}.</comment>
+        </property>
+        <property>
+            <name>AccountId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's unique Dropbox ID.</comment>
+        </property>
+        <property>
+            <name>Email</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's e-mail address. Do not rely on this without checking the
+ {@link Account#getEmailVerified} field. Even then, it's possible that the
+ user has since lost access to their e-mail.</comment>
+        </property>
+        <property>
+            <name>IsTeammate</name>
+            <returntype>boolean</returntype>
+            <comment>Whether this user is a teammate of the current user. If this account is
+ the current user's account, then this will be {@code true}.</comment>
+        </property>
+        <property>
+            <name>Disabled</name>
+            <returntype>boolean</returntype>
+            <comment>Whether the user has been disabled.</comment>
+        </property>
+        <property>
+            <name>ProfilePhotoUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment>URL for the photo representing the user, if one is set.</comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>com.dropbox.core.v2.users.Name</returntype>
+            <comment>Details of a user's name.</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.users.DbxUserUsersRequestsWrapper</name>
+        <shortname>DbxUserUsersRequests</shortname>
+        <objectwrapper>com.dropbox.core.v2.users.DbxUserUsersRequests</objectwrapper>
+        <owner>process</owner>
+        <event>getAccount(account As BasicAccount)</event>
+        <event>getCurrentAccount(account As FullAccount)</event>
+        <event>getAccountBatch(batch As List)</event>
+        <event>getSpaceUsage(usage As SpaceUsage)</event>
+        <method>
+            <name>Account</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>accountId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CurrentAccount</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AccountBatch</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>accountIds</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>setEventname</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>SpaceUsage</name>
+            <returntype>void</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.users.FullAccountWrapper</name>
+        <shortname>FullAccount</shortname>
+        <objectwrapper>com.dropbox.core.v2.users.FullAccount</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>usage</name>
+                <type>com.dropbox.core.v2.users.FullAccount</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Locale</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The language that the user specified. Locale tags will be &lt;a
+ href="http://en.wikipedia.org/wiki/IETF_language_tag"&gt;IETF language
+ tags&lt;/a&gt;.</comment>
+        </property>
+        <property>
+            <name>AccountId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's unique Dropbox ID.</comment>
+        </property>
+        <property>
+            <name>Email</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's e-mail address. Do not rely on this without checking the
+ {@link Account#getEmailVerified} field. Even then, it's possible that the
+ user has since lost access to their e-mail.</comment>
+        </property>
+        <property>
+            <name>IsPaired</name>
+            <returntype>boolean</returntype>
+            <comment>Whether the user has a personal and work account. If the current account
+ is personal, then {@link FullAccount#getTeam} will always be {@code
+ null}, but {@link FullAccount#getIsPaired} will indicate if a work
+ account is linked.</comment>
+        </property>
+        <property>
+            <name>AccountType</name>
+            <returntype EnumType="true">com.dropbox.core.v2.users.AccountType</returntype>
+            <comment>What type of account this user has.</comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>com.dropbox.core.v2.users.Name</returntype>
+            <comment>Details of a user's name.</comment>
+        </property>
+        <property>
+            <name>EmailVerified</name>
+            <returntype>boolean</returntype>
+            <comment>Whether the user has verified their e-mail address.</comment>
+        </property>
+        <property>
+            <name>TeamMemberId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>This account's unique team member id. This field will only be present if
+ {@link FullAccount#getTeam} is present.</comment>
+        </property>
+        <property>
+            <name>Country</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's two-letter country code, if available. Country codes are based
+ on &lt;a href="http://en.wikipedia.org/wiki/ISO_3166-1"&gt;ISO 3166-1&lt;/a&gt;.</comment>
+        </property>
+        <property>
+            <name>Team</name>
+            <returntype>com.dropbox.core.v2.users.FullTeam</returntype>
+            <comment>If this account is a member of a team, information about that team.</comment>
+        </property>
+        <property>
+            <name>ReferralLink</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The user's &lt;a href="https://www.dropbox.com/referrals"&gt;referral link&lt;/a&gt;.</comment>
+        </property>
+        <property>
+            <name>Disabled</name>
+            <returntype>boolean</returntype>
+            <comment>Whether the user has been disabled.</comment>
+        </property>
+        <property>
+            <name>ProfilePhotoUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment>URL for the photo representing the user, if one is set.</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.users.NameWrapper</name>
+        <shortname>Name</shortname>
+        <objectwrapper>com.dropbox.core.v2.users.Name</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>givenName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>surname</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>familiarName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>displayName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>abbreviatedName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment>Returns a String representation of this object formatted for easier
+ readability.
+
+ &lt;p&gt; The returned String may contain newlines. &lt;/p&gt;
+Return type: @return:Formatted, multiline String representation of this object</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>FamiliarName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Locale-dependent name. In the US, a person's familiar name is their
+ {@link Name#getGivenName}, but elsewhere, it could be any combination of
+ a person's {@link Name#getGivenName} and {@link Name#getSurname}.</comment>
+        </property>
+        <property>
+            <name>DisplayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>A name that can be used directly to represent the name of a user's
+ Dropbox account.</comment>
+        </property>
+        <property>
+            <name>GivenName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Also known as a first name.</comment>
+        </property>
+        <property>
+            <name>Surname</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Also known as a last name or family name.</comment>
+        </property>
+        <property>
+            <name>AbbreviatedName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>An abbreviated form of the person's name. Their initials in most locales.</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.users.SpaceAllocationWrapper</name>
+        <shortname>SpaceAllocation</shortname>
+        <objectwrapper>com.dropbox.core.v2.users.SpaceAllocation</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>getindividual</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.users.SpaceAllocation</returntype>
+            <parameter>
+                <name>value</name>
+                <type>com.dropbox.core.v2.users.IndividualSpaceAllocation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getteam</name>
+            <comment></comment>
+            <returntype>com.dropbox.core.v2.users.SpaceAllocation</returntype>
+            <parameter>
+                <name>value</name>
+                <type>com.dropbox.core.v2.users.TeamSpaceAllocation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isIndividual</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>alloc</name>
+                <type>com.dropbox.core.v2.users.SpaceAllocation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isTeam</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>isOther</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>OTHER</name>
+            <returntype>com.dropbox.core.v2.users.SpaceAllocation</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IndividualValue</name>
+            <returntype>com.dropbox.core.v2.users.IndividualSpaceAllocation</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TeamValue</name>
+            <returntype>com.dropbox.core.v2.users.TeamSpaceAllocation</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype EnumType="true">com.dropbox.core.v2.users.SpaceAllocation.Tag</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.dbxv2.users.SpaceUsageWrapper</name>
+        <shortname>objectname</shortname>
+        <objectwrapper>com.dropbox.core.v2.users.SpaceUsage</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>usage</name>
+                <type>com.dropbox.core.v2.users.SpaceUsage</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toStringMultiline</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Allocation</name>
+            <returntype>com.dropbox.core.v2.users.SpaceAllocation</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Used</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>0.28</version>
+    <comment>The Dropbox library allows you to communicate with Dropbox</comment>
+    <author>DonManfred (wrapper)</author>
+    <dependsOn>dropbox-core-sdk-2.1.2</dependsOn>
+    <dependsOn>jackson-core-2.7.4</dependsOn>
+</root>

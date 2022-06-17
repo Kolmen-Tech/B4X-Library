@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <version>1.00</version>
+	<ide_comment>No need to reference this library. Add a reference to B4XPagesManager instead.</ide_comment>
+    <customClass>filenamewithoutextension:b4xpage, name:B4XPage</customClass>
+</root>

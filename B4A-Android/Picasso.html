@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Picasso</title>
+		<style type="text/css">
+			body{
+				background-color:#E1DEE6;
+				color:#222;
+				font-family:Arial,Helvetica,sans-serif;
+				font-size:14px;
+				margin:0;
+				padding:0;
+			}
+			h3{
+				background-color:#869BBF;
+				margin:0;
+				padding:5px;
+			}
+			ul{
+				list-style:none;
+				margin:5px;
+				padding:0;
+			}
+			ul li{
+				background-color:#FFF;
+				border:1px solid #666;
+				margin:0;
+				padding:5px;
+			}
+			ul li:first-child, h3{
+				border-top-left-radius:5px;
+				border-top-right-radius:5px;
+			}
+			ul li:last-child, h3{
+				border-bottom-left-radius:5px;
+				border-bottom-right-radius:5px;
+			}
+			ul h3:first-child{
+				background-color:#869BDF;
+				margin-bottom:5px;
+			}
+		</style>
+    </head>
+    <body><h3>Picasso</h3>
+<ul><li><h3>Comment:</h3></li><li>Picasso is an open source library that manages the loading of images in your application.
+ http://square.github.io/picasso/
+ Licensed under the Apache License, version 2.0:
+ http://www.apache.org/licenses/LICENSE-2.0</li></ul>
+<ul>
+<li><h3>DefaultTarget</h3>
+<h3>Events:</h3>
+<ul>
+<li><b>Error</b> (Tag <span style='color:blue'>As</span> <span style='color:#008B8B'>Object</span>)</li>
+<li><b>Success</b> (Bitmap1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Bitmap</span>, Tag <span style='color:blue'>As</span> <span style='color:#008B8B'>Object</span>)</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>Initialize</b> (EventName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, Tag <span style='color:blue'>As</span> <span style='color:#008B8B'>Object</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>Picasso</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>CancelRequest</b> (ImageView1 <span style='color:blue'>As</span> <span style='color:#008B8B'>ImageView</span>)<b></b>
+<br><i>Cancel any existing requests for the specified target ImageView1.</i>
+</li>
+<li><b>CancelRequest2</b> (Target1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Target</span>)<b></b>
+<br><i>Cancel any existing requests for the specified Target instance.</i>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>IsDebugging <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Returns True if debug display, logging, and statistics are enabled.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>LoadFile</b> (FilePath <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Start an image request using the specified image file path.</i>
+</li>
+<li><b>LoadResource</b> (ResourceName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Start an image request using the specified drawable resource.</i>
+</li>
+<li><b>LoadUrl</b> (Url <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Start an image request using the specified URL.</i>
+</li>
+<li><b>SetDebugging</b> (Debugging <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+<br><i>Set whether debug display, logging, and statistics are enabled.</i>
+</li>
+</ul>
+<h3>Permissions:</h3>
+<ul>
+<li>android.permission.INTERNET</li>
+</ul>
+</ul>
+<ul>
+<li><h3>RequestBuilder</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>CenterCrop <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Crops an image inside of the bounds specified by Resize(TargetWidth, TargetHeight) rather than distorting the aspect ratio.
+ CenterCrop can only be used after calling Resize.</i>
+</li>
+<li><b>CenterInside <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>CenterInside can only be used after calling Resize.</i>
+</li>
+<li><b>ErrorDrawable</b> (ErrorDrawable <span style='color:blue'>As</span> <span style='color:#008B8B'>Drawable</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Set a Drawable to be used if the requested image could not be loaded.</i>
+</li>
+<li><b>ErrorResource</b> (ResourceName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Set a drawable resource to be used if the requested image could not be loaded.</i>
+</li>
+<li><b>Fetch</b> (Target1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Target</span>)<b></b>
+<br><i>Asynchronously fulfils the request into the specified Target1.</i>
+</li>
+<li><b>Fit <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Attempt to resize the image to fit exactly into the target ImageView's bounds.</i>
+</li>
+<li><b>Get <span style='color:blue'>As</span> <span style='color:#008B8B'>BitmapWrapper</span></b>
+<br><i>Synchronously fulfill this request.</i>
+</li>
+<li><b>IntoImageView</b> (ImageView1 <span style='color:blue'>As</span> <span style='color:#008B8B'>ImageView</span>)<b></b>
+<br><i>Asynchronously fulfils the request into the specified ImageView.</i>
+</li>
+<li><b>IntoTarget</b> (Target1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Target</span>)<b></b>
+<br><i>Asynchronously fulfils the request into the specified Target.
+ See also the RequestBuilder Fetch method.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>NoFade <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Disable brief fade in of images loaded from the disk cache or network.</i>
+</li>
+<li><b>PlaceholderDrawable</b> (PlaceholderDrawable <span style='color:blue'>As</span> <span style='color:#008B8B'>Drawable</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Set a Drawable to be used while the requested image is being loaded.</i>
+</li>
+<li><b>PlaceholderResource</b> (ResourceName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Set a drawable resource to be used while the requested image is being loaded.</i>
+</li>
+<li><b>Resize</b> (TargetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, TargetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Resize the image to the specified size in pixels.</i>
+</li>
+<li><b>ResizeDimen</b> (TargetWidthResourceName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, TargetHeightResourceName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Resize the image to the specified resource dimensions size.</i>
+</li>
+<li><b>Rotate</b> (Degrees <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Rotate the image by the specified degrees.</i>
+</li>
+<li><b>Rotate2</b> (Degrees <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, PivotX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, PivotY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Rotate the image by the specified degrees around the specified pivot point.</i>
+</li>
+<li><b>Scale</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Scale the image using the specified factor.</i>
+</li>
+<li><b>Scale2</b> (FactorX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, FactorY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Scale the image using the specified factors.</i>
+</li>
+<li><b>SkipCache <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Indicate that this request should not use the memory cache for attempting to load or save the image.</i>
+</li>
+<li><b>Transform</b> (Transformation1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Transformation</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>RequestBuilder</span></b>
+<br><i>Add a custom transformation to be applied to the image.
+ ** The Transformation interface is not currently implemented so this method has no use **</i>
+</li>
+</ul>
+</ul>
+<ul><li><h3>Author: Martin Pearman</h3></li></ul>
+<ul><li><h3>Version: 1</h3></li></ul></body>
+</html>								

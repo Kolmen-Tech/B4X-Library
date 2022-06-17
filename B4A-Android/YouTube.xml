@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.YouTubeStandalonePlayerWrapper</name>
+        <shortname>YouTubeStandalonePlayer</shortname>
+        <owner>activity</owner>
+        <event>Result (Message As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the sub that will handle the events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CheckPlayerSupported</name>
+            <comment>Tests whether the YouTube player service is supported.
+Returns SUCCESS or an error message.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>StartPlaylist</name>
+            <comment>Plays the videos in the playlist.
+DeveloperKey - The developer key from Google APIs console.
+PlaylistId - YouTube playlist id (the list value in the URL).
+StartIndex - The index of the video to be played first. The first index is 0.
+TimeMillis - The time in milliseconds where playback should start in the first video.
+AutoPlay - Whether the playback should start automatically.
+LightboxMode - If true then the video is played in a dialog over the current activity, 
+ otherwise the video is played in its own activity (forced to landscape orientation).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>DeveloperKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PlaylistId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>StartIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TimeMillis</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>AutoPlay</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>LightboxMode</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartVideo</name>
+            <comment>Plays the video.
+DeveloperKey - The developer key from Google APIs console.
+VideoId - YouTube video id.
+TimeMillis - The time in milliseconds where playback should star.
+AutoPlay - Whether the playback should start automatically.
+LightboxMode - If true then the video is played in a dialog over the current activity, 
+ otherwise the video is played in its own activity (forced to landscape orientation).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>DeveloperKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>VideoId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TimeMillis</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>AutoPlay</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>LightboxMode</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <dependsOn>YouTubeAndroidPlayerApi</dependsOn>
+</root>

@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <b4x_version>8.50</b4x_version>
+  <class>
+    <name>b4a.StringFunctions2.stringfunctions2</name>
+    <shortname>StringFunctions2</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddSpaces">_addspaces</name>
+      <comment>Returns a string of spaces. The number returned Is set by HowMany.
+&lt;code&gt;
+AddSpaces(5) 'Result: "     "
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>HowMany</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="At">_at</name>
+      <comment>Returns the position of the SearchFor within YourString.
+&lt;code&gt;
+At("1234567890", "2")  'Result: 1
+&lt;/code&gt;
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>YourString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SearchFor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="CurrentWeek">_currentweek</name>
+      <comment>Returns the number of the current week, 1-52 from the date passed To MyDate.
+&lt;code&gt;
+CurrentWeek( "01/31/2019")  'Return: 5
+&lt;/code&gt;
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DayOfMonth">_dayofmonth</name>
+      <comment>Returns the day of the month like 1-31, from the date passed To MyDate.
+&lt;code&gt;
+DayOfMonth( "01/31/2019")  'Return: 31
+&lt;/code&gt;
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Decrypt">_decrypt</name>
+      <comment>Converts an encrypted string (XOR) of text To readable format, no key Is needed.
+&lt;code&gt;
+Decrypt( "eb82efcf85ea8fafed9ff087e9")  'Result: "Jim Joe Brown"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>YourText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Empty">_empty</name>
+      <comment>Test To see If the string Is empty And returns True If it Is, otherwise returns False.
+&lt;code&gt;
+&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Encrypt">_encrypt</name>
+      <comment>Converts a string of text To simple encryption (xor), no Key Is needed.
+&lt;code&gt;
+Encrypt("Jim Joe Brown")  'Result: "eb82efcf85ea8fafed9ff087e9"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>YourText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="EraseData">_erasedata</name>
+      <comment>This will erase all data saved with the SaveData function stored in the
+temporary vault.
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="FileExist">_fileexist</name>
+      <comment>Returns True If the filename passed does exist, otherwise returns False.
+Be sure To include the path like:
+&lt;code&gt;
+If FileExist("/mnt/sdcard/mydata.dat") Then Msgbox("Yes", "The Answer")
+&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>PathAndFileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetData">_getdata</name>
+      <comment>Gets data from the temporary vault.
+&lt;code&gt;
+EditText1.Text = SF.GetData("EnteredName")
+&lt;/code&gt;
+The Key Is Case sensitive.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getSDCardPath" HideFromIDE="true">_getsdcardpath</name>
+      <comment>Returns external/physical SD Card directory. This function may Not Return the correct store
+on an Android OS above 4.1. This Is due To changes made To the OS system in the newer versions.
+Returns "", If the store can Not be read.
+Returns external/physical SD Card directory
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="iif">_iif</name>
+      <comment>This Is a single line If conditional test. If Value1 Is True, Value2 Is returned, otherwise
+Value3 will be returned. Works with strings And booleans.
+&lt;code&gt;
+Msgbox(iif("Bob"="Jim", "They are the same", "They are not the same"), "The Answer")
+'or
+MyBoolean = iif(FirstTime = True, StartMyService = True, StartMyService = False)
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value2</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value3</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InString">_instring</name>
+      <comment>Returns the position of the SearchFor within YourString.
+&lt;code&gt;
+InString( "1234567890", "2")  'Result: 1
+&lt;/code&gt;
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>YourString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SearchFor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsEmpty">_isempty</name>
+      <comment>Test To see If the string Is empty And returns True If it Is, otherwise returns False.
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Left">_left</name>
+      <comment>Returns the Left portion of a string with the number of characters passed
+in Length.
+&lt;code&gt;
+Left( "0123456789", 2)  'Result: "01"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Length</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Len">_len</name>
+      <comment>Returns the length of the string.
+&lt;code&gt;
+Len( "0123456789")'Return: 10
+&lt;/code&gt;
+</comment>
+      <returntype>long</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ListToString">_listtostring</name>
+      <comment>Converts a List object To a String.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>YourList</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>Sorted</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ListToStringArray">_listtostringarray</name>
+      <comment>Converts a List object To a String Array.
+</comment>
+      <returntype>String[]</returntype>
+      <parameter>
+        <name>YourList</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>Sorted</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Lower">_lower</name>
+      <comment>Returns the string converted To Lowercase characters.
+&lt;code&gt;
+Lower( "Jim Joe Brown")  'Result: "jim joe brown"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Ltrim">_ltrim</name>
+      <comment>Returns a new string with the leading spaces removed.
+&lt;code&gt;
+LTrim( "  Jim Joe Brown  ")  'Return: "Jim Joe Brown  "
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Mid">_mid</name>
+      <comment>Returns the a new String For how ever many characters passed in Length from
+a starting position passed in Start.
+Example:
+&lt;code&gt;
+Mid( "This is a long line of text", 10, 4)  'Result: "long"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Start</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Length</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MidExtract">_midextract</name>
+      <comment>Used To extract text from a string between To other blocks of text.
+&lt;code&gt;
+MidExtract("Dr. Jim Joe Brown", "Jim", "Brown") 'Result: (ArrayList) [ Joe ]
+MidExtract("Dr. Jim [Joe] Brown", "[", "]") 'Result: (ArrayList) [ Joe ]
+MidExtract("this is a [sample] string* with [some] special words. [another one]", "[", "]") 'Result: (ArrayList) [sample, some, another one]
+&lt;/code&gt;
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Start</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>EndAt</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MidS">_mids</name>
+      <comment>Works like the Mid$ function in Visual Basic.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>StartAt</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Month">_month</name>
+      <comment>Returns the number of the current month 1-12 As Int Type, from the date passed To MyDate.
+&lt;code&gt;
+Month( "01/31/2019")  'Result: 1
+&lt;/code&gt;
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MonthName">_monthname</name>
+      <comment>Returns the Name the current month As a String like January, etc., from the date passed To MyDate.
+&lt;code&gt;
+MonthName( "01/31/2019")  'Result: "January"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="NewDate">_newdate</name>
+      <comment>Returns a new date adding Or subtracting HowManyDays. HowManyDays can be positive Or
+negative numbers.
+&lt;code&gt;
+NewDate( "01/31/2019", 2)  'Result: "02/02/2019"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DatePassed</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>HowManyDays</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="NumOfDaysBetween">_numofdaysbetween</name>
+      <comment>Returns the numbers of days passed between the two dates passed.
+&lt;code&gt;
+NumOfDaysBetween( "01/31/2019", "03/31/2019")  'Result: 59
+&lt;/code&gt;
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>CurrentDate</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>OtherDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Pad">_pad</name>
+      <comment>Used To pad a string with a selected character. If Post = True the padding will follow
+any text in the string, If Post = False, the padding will be before the text. Length Is
+the total length For the padded string. PadWith Is the selected character To use For the
+padding.
+&lt;code&gt;
+Pad("Jimmy Joe", "+", 20, True)  'Result: "Jimmy Joe+++++++++++"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PadWith</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Length</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Post</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Proper">_proper</name>
+      <comment>Returns the string in proper format.
+Example:
+&lt;code&gt;
+Proper( "jim joe brown")  'Result: "Jim Joe Brown"
+&lt;/code&gt;
+This function will Return: "Jim Joe Brown"
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Replicate">_replicate</name>
+      <comment>Repeats any character passed, a selected number of Times.
+&lt;code&gt;
+Replicate( "+", 5)  'Result: "+++++"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>mChar</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Times</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Right">_right</name>
+      <comment>Returns the Right portion of a string with the number of characters passed
+in Length.
+&lt;code&gt;
+Right( "0123456789", 2)  'Result: "89"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Length</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RndChrGen">_rndchrgen</name>
+      <comment>Returns a string of ramdom characters (a-z) with a length specified by StringLength. CharacterType tells
+the function what Type of characters To Return.
+CharacterType = 0 For Upper And Lower Case
+CharacterType = 1 For Upper Case only
+CharacterType = 2 For Lower Case only
+&lt;code&gt;
+RndChrGen(  10, 0) 'Result: "uBcgOIEyuM"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringLength</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>CharacterType</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Rtrim">_rtrim</name>
+      <comment>Returns a new string with the trailing spaces removed.
+&lt;code&gt;
+RTrim( "  Jim Joe Brown  ")  'Result: "  Jim Joe Brown"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveData">_savedata</name>
+      <comment>Save data passed in a temporary File.
+&lt;code&gt;
+SaveData("ScreenTitle", MyVar)
+'or
+SaveData("EnteredName", EditText1.Text)
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Data</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScrInfo">_scrinfo</name>
+      <comment>Returns information about the devices screen. You can pass these parameters:
+Pass "W" For Width
+Pass "H" For Height
+Pass "S" For Scale
+Pass "D" For DPI
+&lt;code&gt;
+ScrInfo("W")
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>p</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SDCards">_sdcards</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="SearchDate">_searchdate</name>
+      <comment>Returns True If the Date1 And the Date2 are within x Days(DateRange) of each other.
+Pass the dates As Strings.
+&lt;code&gt;
+SearchDate( "01/31/2019", "03/31/2019", 60)  'Result: True
+&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Date1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Date2</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>DateRange</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Split">_split</name>
+      <comment>Returns a LIST of items from the string split At the Delimiter.
+&lt;code&gt;
+Split("This is a test string.", " ")  'Result: (ArrayList) [This, is, a, test, string.]
+&lt;/code&gt;
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>CurrentString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Split_At_Delimiter</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SplitGetWord">_splitgetword</name>
+      <comment>Returns just the one element selected with GetElement from the string.
+&lt;code&gt;
+SplitGetWord("This is a test string.", " ", 3)  'Result: "test"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CurrentString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Split_At_Delimiter</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>GetElement</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StrArraySort">_strarraysort</name>
+      <comment>Used To sort a String Array. Sort will be in Ascending order If Ascending = True.
+&lt;code&gt;
+StrArraySort( Array As String( "a", "c", "b"), True)  'Result: StringArray( a, b, c)
+&lt;/code&gt;
+</comment>
+      <returntype>String[]</returntype>
+      <parameter>
+        <name>StringArray</name>
+        <type>String[]</type>
+      </parameter>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StringArrayToList">_stringarraytolist</name>
+      <comment>Converts a String Array To a List object.
+&lt;code&gt;
+StringArrayToList( Array As String( "a", "c", "b"), True, True)  'Result: (ArrayList) [a, b, c]
+&lt;/code&gt;
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>StringArray</name>
+        <type>String[]</type>
+      </parameter>
+      <parameter>
+        <name>Sorted</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StringToList">_stringtolist</name>
+      <comment>Convert a String To a List object. This will split the string between words.
+&lt;code&gt;
+StringToList( "Jim Joe Brown", True, True)  'Return: (ArrayList) [Brown, Jim, Joe]
+&lt;/code&gt;
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Sorted</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Stuff">_stuff</name>
+      <comment>Used To replace text in a string with new text.
+&lt;code&gt;
+Stuff("I will tell you that joe is a good friend!", "Joe Brown", "joe")
+'Return: "I will tell you that Joe Brown is a good friend!"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CurrentText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>InsertInString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>RemoveFromString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Today">_today</name>
+      <comment>Returns the devices date.
+&lt;code&gt;
+Today  'Result: "01/31/2019"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Trim">_trim</name>
+      <comment>Returns a new string with leading And trailing spaces removed.
+&lt;code&gt;
+Trim( "  Jim Joe Brown  ")  'Result: "Jim Joe Brown"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Upper">_upper</name>
+      <comment>Returns the string converted To Uppercase characters.
+&lt;code&gt;
+Upper( "Jim Joe Brown")  'Result: "JIM JOE BROWN"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Val">_val</name>
+      <comment>Returns the numerical value of a string. If the string contains no value it returns 0.
+&lt;code&gt;
+Val( "12345")  'Result: 123456
+&lt;/code&gt;
+</comment>
+      <returntype>double</returntype>
+      <parameter>
+        <name>StringText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ValidDate">_validdate</name>
+      <comment>Returns True If the date passed Is a Valid date.
+&lt;code&gt;
+ValidDate( "01/31/2019")  'Result: True
+&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>ChkDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="WeekDay">_weekday</name>
+      <comment>Returns the number of the day of the week 1-7 As a String, from the date passed To MyDate.
+&lt;code&gt;
+WeekDay( "01/31/2019")  'Result: 5
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="WeekName">_weekname</name>
+      <comment>Returns the name of the day of the week like Sunday, Monday, etc., from the date passed To MyDate.
+&lt;code&gt;
+WeekName( "01/31/2019")  'Result: "Thursday"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Year">_year</name>
+      <comment>Returns the year of the date passed in MyDate.
+&lt;code&gt;
+Year("01/01/2013")  'Result: "2019"
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MyDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="SDCardPath">_sdcardpath</name>
+      <comment>Returns external/physical SD Card directory. This function may Not Return the correct store
+on an Android OS above 4.1. This Is due To changes made To the OS system in the newer versions.
+Returns "", If the store can Not be read.
+Returns external/physical SD Card directory
+</comment>
+      <returntype>String</returntype>
+    </property>
+  </class>
+  <version>1</version>
+  <author>Thorsten Schlott (knoppi)</author>
+</root>

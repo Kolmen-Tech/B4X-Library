@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>wifi.MLwifi</name>
+        <shortname>MLwifi</shortname>
+        <owner>process</owner>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <method>
+            <name>EnableWifi</name>
+            <comment>Turns wifi on or off
+ 
+ Pass True to enable wifi or False to disable.
+ 
+ Example
+ dim wifi as MLwifi
+ 
+ wifi.EnableWifi(true)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MACAddress</name>
+            <comment>Returns MAC address of the current interface
+  
+ Returns  MAC address or empty string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isWifiConnected</name>
+            <comment>Checks if wifi is connected. This only checks for wifi connection to a router.
+ It does NOT test for internet availability. Use isOnLine() for that.
+ 
+ Returns True if wifi is connected or False if 2g, 3g, 4g, wimax or no connection.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isOnLine</name>
+            <comment>Checks for internet connection
+ 
+ This method does not check or care what type of network is used.
+ It can be wifi, 2g, 3g, 4g, wimax, etc. It just tests for internet connectivity.
+ 
+ Returns True if internet is available.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>WifiStrength</name>
+            <comment>Returns an integer between 0 and 100 as a percentage of signal strength
+ 
+ Returns 0 on error.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IpAddress</name>
+            <comment>Get IP address from the wifi interface)
+ 
+ Returns  address or empty string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WifiSignal</name>
+            <comment>Returns the raw signal strength in decibels as an integer
+ 
+ Returns 0 on error</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SSID</name>
+            <comment>Returns the current SSID</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <class>
+        <name>wifi.MLwifi.MLWifiScanner</name>
+        <shortname>MLScan</shortname>
+        <owner>process</owner>
+        <event>ScanDone(Results() As String, Count As Int)</event>
+        <method>
+            <name>listSavedNetworks</name>
+            <comment>Builds a list of all saved networks on the device.
+ 
+ Returns a comma separated list of SSID's and their BSSID and network ID number.</comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>Disconnect</name>
+            <comment>Disconnects the current wifi AP connection
+ 
+ Returns True on success</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>forgetAP</name>
+            <comment>Forgets (erases) a stored access point on the device.
+ 
+ NetId - The network ID number to forget (returned in the listSavedNetworks method)
+ 
+ Returns True if successful</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>NetId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WifiCap</name>
+            <comment>Returns a String containing info about the entry. A startScan must have already been done. The string contains the SSID, the BSSID, and the capabilities of the network access point.
+ Each item is separated by a comma (SSID,BSSID,CapabilityString). The capabilities part can be quite long.
+ 
+ EntryNumber - If you display the string array wifis or the array returned in the getWifiList method UNSORTED, you can pass the Position variable from your ListView_Click event.
+ Otherwise, you must pass the entry number from the string array since that is what is used as a reference.
+ 
+ Returns a string of comma separated entries of SSID,BSSID, and capability string. Returns an empty string on error.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>EntryNumber</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>connectToAP</name>
+            <comment>Connects to a network already configured on the device. The device will use saved values to connect. Updated to handle quoted or unquoted SSID strings.
+ 
+ EntryNumber - If you display the string array wifis or the array returned in the getWifiList method UNSORTED, you can pass the Position variable from your ListView_Click event.
+ Otherwise, you must pass the entry number from the string array since that is what is used as a reference.
+ 
+ Returns true if successful</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>EntryNumber</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addAP</name>
+            <comment>Adds an entry to the wifi manager and connects to it. This method saves the configuration of the new entry onto the device. Use the forgetAP method to delete them. Updated to handle quoted or unquoted SSID strings.
+ 
+ EntryNumber - If you display the string array wifis or the array returned in the getWifiList method UNSORTED, you can pass the Position variable from your ListView_Click event.
+ Otherwise, you must pass the entry number from the string array since that is what is used as a reference.
+ 
+ securityType - The Access Point security type (returned in the scan result string array)
+ 
+ Password - The password/phrase for the wifi access point. Pass "" for an open network. Handles WEP HEX or text phrases
+ 
+ It is up to you to supply all information. The security type is found in the scan results array.
+  
+ Returns True if the connection is successful</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>EntryNumber</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>securityType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>startScan</name>
+            <comment>Initializes all objects and scans for wifi networks. Builds a string array of results (wifis) that can be accessed directly or with a call to updateWifiList.
+ THIS METHOD SHOULD ONLY BE CALLED ONCE!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isStored</name>
+            <comment>Checks the stored networks on the device to see if this entry is a previously saved access point
+ 
+ EntryNumber - The entry number in the wifis array to check. If you display the string array wifis or the array returned in the getWifiList method UNSORTED, you can pass the Position variable from your ListView_Click event.
+ Otherwise, you must pass the entry number from the string array since that is what is used as a reference.
+ 
+ Returns True if this is a stored network</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>EntryNumber</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>updateWifiList</name>
+            <comment>Call only after startScan has already been called and a string array of Access Points has been built. This method returns a string array containing the access points from the most recent scan, including background scans done automatically by the Android WifiManager.	    * 
+ 
+ The initial list takes several seconds to build. Use a timer or other means to test if the result is &gt; null.
+ 
+ Returns the string array of comma separated wifi access points by SSID. Each entry may contain the following:
+ SSID, Security type, Signal level (in DB's), and the word "Saved" if the network was previously saved for use on this device.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getBSSID</name>
+            <comment>Returns the BSSID for the selected entry. 
+ 
+ EntryNumber - If you display the string array wifis or the array returned in the getWifiList method UNSORTED, you can pass the Position variable from your ListView_Click event.
+ Otherwise, you must pass the entry number from the string array since that is what is used as a reference.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>EntryNumber</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>LinkSpeed</name>
+            <returntype>int</returntype>
+            <comment>Returns the LinkSpeed of the connected wifi access point</comment>
+        </property>
+        <field>
+            <name>wifis</name>
+            <comment>A string array containing all scanned access points in the area of the device.
+ These are comma separated entries consisting of the following:
+ 
+ SSID, Security type, signal strength, and "Saved" if this network was previously saved for use on this device.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </field>
+    </class>
+    <version>2.15</version>
+    <author>Jem Miller - Missing Link Software</author>
+</root>
